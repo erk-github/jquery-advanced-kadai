@@ -166,3 +166,12 @@ $(function() {
   return result;
 }
 });
+
+$(document).ready(function() {
+  $('.scroll-to-company').on('click', function(event) {
+    event.preventDefault(); // デフォルトのリンク動作を防止
+    $('html, body').animate({
+      scrollTop: $('#COMPANY').offset().top
+    }, 1000); // 1秒かけてスクロール
+  });
+});
